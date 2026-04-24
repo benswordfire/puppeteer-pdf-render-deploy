@@ -17,7 +17,7 @@ app.get('/pdf', async (request: Request, response: Response) => {
 
     const page = await browser.newPage();
 
-    await page.setContent("<h1>Hello World</h1>", { waitUntil: 'networkidle0' });
+    await page.setContent("<h1>Hello World</h1>");
 
     const pdfBuffer = await page.pdf();
 
